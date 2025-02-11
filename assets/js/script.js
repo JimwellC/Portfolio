@@ -147,3 +147,116 @@ const initSlider = function (currentSlider) {
 }
 
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
+
+
+/**
+ * BACK TO TOP BUTTON
+ */
+
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+  const bodyHeight = document.body.scrollHeight;
+  const windowHeight = window.innerHeight;
+  const scrollEndPos = bodyHeight - windowHeight;
+  const totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
+
+  backTopBtn.textContent = `${totalScrollPercent.toFixed(0)}%`;
+
+  // visible back top btn when scrolled 5% of the page
+  if (totalScrollPercent > 5) {
+    backTopBtn.classList.add("show");
+  } else {
+    backTopBtn.classList.remove("show");
+  }
+});
+
+/**
+ * CUSTOM CURSOR
+ */
+
+const cursor = document.querySelector("[data-cursor]");
+const anchorElements = document.querySelectorAll("a");
+const buttons = document.querySelectorAll("button");
+
+// change cursorElement position based on cursor move
+document.body.addEventListener("mousemove", function (event) {
+  setTimeout(function () {
+    cursor.style.top = `${event.clientY}px`;
+    cursor.style.left = `${event.clientX}px`;
+  }, 100);
+});
+
+/**PAGINATION */
+document.addEventListener('DOMContentLoaded', function () {
+  const certificatePages = document.querySelectorAll('.certificate-page');
+  const paginationLinks = document.querySelectorAll('.pagination a[data-page]');
+  const certificateTitle = document.getElementById('certificate-title');
+  let currentPage = 1;
+
+  function showPage(page) {
+    certificatePages.forEach((item) => {
+      item.style.display = item.getAttribute('data-page') == page ? 'block' : 'none';
+    });
+    paginationLinks.forEach((link) => {
+      link.parentElement.classList.toggle('active', link.getAttribute('data-page') == page);
+    });
+    const activeLink = document.querySelector('.pagination a[data-page="' + page + '"]');
+    if (activeLink) {
+      certificateTitle.textContent = activeLink.getAttribute('data-title');
+    }
+  }
+
+  paginationLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentPage = parseInt(link.getAttribute('data-page'));
+      showPage(currentPage);
+    });
+  });
+
+  // Initialize
+  showPage(currentPage);
+
+
+  // Remove focus from project cards after redirection
+  const projectLinks = document.querySelectorAll('.portfolio-card .layer-link');
+  projectLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      setTimeout(() => {
+        link.blur();
+      }, 100);
+    });
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('[data-carousel]');
+  const carouselInner = carousel.querySelector('[data-carousel-inner]');
+  const prevButton = carousel.querySelector('[data-carousel-prev]');
+  const nextButton = carousel.querySelector('[data-carousel-next]');
+  const items = carouselInner.querySelectorAll('.carousel-item');
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    items.forEach((item, index) => {
+      item.classList.toggle('active', index === currentIndex);
+    });
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+  }
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+  });
+
+  updateCarousel();
+});

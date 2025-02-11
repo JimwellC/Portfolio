@@ -9,14 +9,14 @@
   <!-- 
     - primary meta tags
   -->
-  <title>Kane Williams - Web & App Developer</title>
+  <title>Jimwell Calma - Online Portfolio</title>
   <meta name="title" content="Kane Williams - Web & App Developer">
   <meta name="description" content="This is a personal portfolio html template made by codewithsadee">
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/CalmaLogoLoader.svg" type="image/svg+xml">
 
   <!-- 
     - google font link
@@ -35,6 +35,7 @@
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
 
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -43,8 +44,9 @@
     - #PRELOADER
   -->
 
-  <div class="preloader" data-preloader>
-    <div class="circle"></div>
+  <div class="loading" data-preloader>
+    <img src="./assets/images/CalmaLogoLoader.svg" width="55" height="55" alt="loading" class="img">
+    <img src="./assets/images/loading-circle.svg" width="70" height="70" alt="" class="circle">
   </div>
 
 
@@ -59,7 +61,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="170" height="40" alt="Pfolio home">
+        <img src="./assets/images/LogoCalma.png" width="60" height="50" alt="Pfolio home">
       </a>
 
       <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
@@ -75,23 +77,23 @@
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Resume</a>
+            <a href="#service" class="navbar-link">Services</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Services</a>
+            <a href="#skills" class="navbar-link">Skills</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Portfolio</a>
+            <a href="#project" class="navbar-link">Portfolio</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Blog</a>
+            <a href="#certificate" class="navbar-link">Certificates</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Contact</a>
+            <a href="#contact" class="navbar-link">Contact</a>
           </li>
 
         </ul>
@@ -118,25 +120,28 @@
 
           <div class="hero-content">
 
-            <h1 class="h1 hero-title">Kane Williams</h1>
+            <h1 class="h1 hero-title">Jimwell Calma</h1>
 
             <p class="hero-subtitle">
               Creative Web & App Developer
             </p>
 
             <div class="hero-banner">
-              <img src="./assets/images/hero-banner.jpg" width="800" height="800" alt="kane williams" class="w-100">
+              <img src="./assets/images/hero-banner.png" width="800" height="800" alt="kane williams" class="w-100">
             </div>
 
             <p class="section-text">
-              Hi, I’m kane williams and I am creative web & app developer who dream making the world better place by
-              creating captivating products.
+              Hi, I’m Jimwell Calma, a passionate web and app developer dedicated to crafting captivating digital experiences. I strive to make the world a better place by designing innovative and user-friendly products.
+            </p>
+
+            <p class="section-text">
+              Let me know if you'd like further tweaks! 🚀
             </p>
 
             <a href="#" class="btn has-before">
-              <span class="span">Download CV</span>
+                <span class="span" style="color: #FF7A01;">Download Resumé</span>
 
-              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                <ion-icon name="download-outline" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
             </a>
 
           </div>
@@ -152,7 +157,7 @@
         - #SERVICE
       -->
 
-      <section class="service" aria-labelledby="service-label">
+      <section id="service" class="service" aria-labelledby="service-label">
         <div class="container">
 
           <div class="title-wrapper">
@@ -324,87 +329,109 @@
         - #SKILLS
       -->
 
-      <section class="section skills" aria-label="our skills">
+      <section id="skills" class="section skills" aria-label="our skills">
         <div class="container">
-
+      
           <p class="section-subtitle">I Make The Future</p>
-
+      
           <h2 class="h2 section-title">I Develop & Create Digital Future.</h2>
-
+      
           <div class="skills-wrapper">
-
-            <div>
-              <p class="section-text">
-                Pellentesque magna magna semper dapibus felis necatin aliuen risus. Pellentesque habitant morbi senectus
-                dictum.
-              </p>
-
-              <p class="section-text">
-                Web design magna magna semper dapibus felis necatin aliuen risus. Pellentesque habitant morbi tristique
-                senectus the neuse malesuada nullam ac lorem miss the duru.
-              </p>
-
-              <a href="#" class="btn has-before">info@kwilliams.com</a>
-            </div>
-
-            <div>
-
+      
+            <div class="skills-column">
               <ul class="skills-list">
-
+      
                 <li>
                   <div class="progress-wrapper">
-                    <p class="progress-label">Design</p>
-
+                    <p class="progress-label">HTML/CSS</p>
                     <data class="progress-value" value="90">90%</data>
                   </div>
-
                   <div class="progress-bg">
                     <div class="progress" style="width: 90%;"></div>
                   </div>
                 </li>
-
+      
                 <li>
                   <div class="progress-wrapper">
-                    <p class="progress-label">Branding</p>
-
+                    <p class="progress-label">JavaScript</p>
+                    <data class="progress-value" value="75">75%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 75%;"></div>
+                  </div>
+                </li>
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Angular</p>
+                    <data class="progress-value" value="75">75%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 75%;"></div>
+                  </div>
+                </li>
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Vue.js</p>
                     <data class="progress-value" value="80">80%</data>
                   </div>
-
                   <div class="progress-bg">
                     <div class="progress" style="width: 80%;"></div>
                   </div>
                 </li>
-
+      
+              </ul>
+            </div>
+      
+            <div class="skills-column">
+              <ul class="skills-list">
+      
                 <li>
                   <div class="progress-wrapper">
-                    <p class="progress-label">Web Design</p>
-
-                    <data class="progress-value" value="95">95%</data>
+                    <p class="progress-label">Flutter</p>
+                    <data class="progress-value" value="65">65%</data>
                   </div>
-
                   <div class="progress-bg">
-                    <div class="progress" style="width: 95%;"></div>
+                    <div class="progress" style="width: 65%;"></div>
                   </div>
                 </li>
-
+      
                 <li>
                   <div class="progress-wrapper">
-                    <p class="progress-label">Social Media</p>
-
+                    <p class="progress-label">WordPress</p>
                     <data class="progress-value" value="85">85%</data>
                   </div>
-
                   <div class="progress-bg">
                     <div class="progress" style="width: 85%;"></div>
                   </div>
                 </li>
-
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Amazon Web Services</p>
+                    <data class="progress-value" value="60">60%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 60%;"></div>
+                  </div>
+                </li>
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Python</p>
+                    <data class="progress-value" value="80">80%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 80%;"></div>
+                  </div>
+                </li>
+      
               </ul>
-
             </div>
-
+      
           </div>
-
+      
         </div>
       </section>
 
@@ -416,146 +443,79 @@
         - #PORTFOLIO
       -->
 
-      <section class="portfolio" aria-labelledby="portfolio-label">
-
+      <section id="project" class="portfolio" aria-labelledby="portfolio-label">
         <div class="title-wrapper container">
-
           <div>
             <p class="section-subtitle" id="portfolio-label">Our Works</p>
-
-            <h2 class="h2 section-title">Portfolio</h2>
+            <h2 class="h2 section-title">Projects</h2>
           </div>
-
           <p class="section-text">
-            Phasellus et lacus suscipit congue nisl the volutpat magna. donec miss the drana risus tincidunt convallis
-            velit orci congue tortor eu dignissim ipsum suam non odio. Pellenta esuntion miss the imperdiet metus
-            ornare.
+            Explore our latest projects, each crafted with precision and creativity. From sleek eCommerce platforms to high-performance service websites, our work showcases innovation and seamless functionality.
           </p>
-
         </div>
-
+      
         <div class="slider" data-slider>
-
           <ul class="slider-container" data-slider-container>
-
             <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-1.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+              <div class="portfolio-card img-holder" style="--width: 500; --height: 500;">
+                <img src="./assets/images/projects/Arya.png" width="500" height="500" loading="lazy" alt="portfolio"
                   class="img-cover">
-
                 <div class="card-content">
-                  <h3 class="h3 card-title">Lab. 001</h3>
-
-                  <p class="card-text">Website Design</p>
+                  <h3 class="h3 card-title" style="color: #FF7A01;">Arya</h3>
+                  <p class="card-text">Arya is an eCommerce website that showcases a variety of shoes.</p>
                 </div>
-
-                <a href="#" class="layer-link"></a>
-
+                <a href="/projects/arya.html" class="layer-link"></a>
               </div>
             </li>
 
             <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-2.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+              <div class="portfolio-card img-holder" style="--width: 500; --height: 500;">
+                <img src="./assets/images/projects/HorizonAutoSpa.png" width="500" height="500" loading="lazy" alt="portfolio"
                   class="img-cover">
-
                 <div class="card-content">
-                  <h3 class="h3 card-title">Aer Agency</h3>
-
-                  <p class="card-text">Website / Development</p>
+                  <h3 class="h3 card-title" style="color: #FF7A01;">HorizonAutoSpa</h3>
+                  <p class="card-text">A professional automotive detailing website offering seamless online booking and a comprehensive showcase of premium car care services.</p>
                 </div>
-
-                <a href="#" class="layer-link"></a>
-
+                <a href="/projects/horizon.html" class="layer-link"></a>
               </div>
             </li>
 
             <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-3.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+              <div class="portfolio-card img-holder" style="--width: 500; --height: 500;">
+                <img src="./assets/images/projects/NineThreeFive.png" width="500" height="500" loading="lazy" alt="portfolio"
                   class="img-cover">
-
                 <div class="card-content">
-                  <h3 class="h3 card-title">Joker Card</h3>
-
-                  <p class="card-text">UX Design / Web App</p>
+                  <h3 class="h3 card-title" style="color: #FF7A01;">NineThreeFive</h3>
+                  <p class="card-text">An eCommerce platform dedicated to handcrafted crochet bags, featuring a seamless shopping experience and a curated showcase of available designs.</p>
                 </div>
-
-                <a href="#" class="layer-link"></a>
-
+                <a href="/projects/ninthreefive.html" class="layer-link"></a>
               </div>
             </li>
 
             <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-4.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+              <div class="portfolio-card img-holder" style="--width: 500; --height: 500;">
+                <img src="./assets/images/projects/leprestige.png" width="500" height="500" loading="lazy" alt="portfolio"
                   class="img-cover">
-
                 <div class="card-content">
-                  <h3 class="h3 card-title">Peaky Blinders</h3>
-
-                  <p class="card-text">Website / UX Design</p>
+                  <h3 class="h3 card-title" style="color: #FF7A01;">LePrestige</h3>
+                  <p class="card-text">A modern online restaurant offering seamless ordering and reservation services.</p>
                 </div>
-
-                <a href="#" class="layer-link"></a>
-
-              </div>
-            </li>
-
-            <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-5.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Design Zoom</h3>
-
-                  <p class="card-text">Branding / Design</p>
-                </div>
-
-                <a href="#" class="layer-link"></a>
-
-              </div>
-            </li>
-
-            <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-6.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Out Zone</h3>
-
-                  <p class="card-text">UX Design / Web App</p>
-                </div>
-
-                <a href="#" class="layer-link"></a>
-
+                <a href="/projects/leprestige.html" class="layer-link"></a>
               </div>
             </li>
 
           </ul>
-
           <div class="slider-controls">
             <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
               <div class="line"></div>
               <div class="arrow"></div>
             </button>
-
             <button class="slider-control next" data-slider-next aria-label="Slide to next item">
               <div class="line"></div>
               <div class="arrow"></div>
             </button>
           </div>
-
         </div>
-
       </section>
 
 
@@ -563,90 +523,300 @@
 
 
       <!-- 
-        - #BLOG
+        - #certificate
       -->
 
-      <section class="section blog" aria-labelledby="blog-label">
-        <div class="container">
-
-          <p class="section-subtitle" id="blog-label">Recent Articles</p>
-
-          <h2 class="h2 section-title">Latest News</h2>
-
-          <ul class="blog-list">
-
-            <li>
-              <div class="blog-card">
-
+      <section id="certificate" class="section certificate" aria-labelledby="certificate-label">
+        <div class="container container-pag">
+      
+          <p class="section-subtitle" id="certificate-label">Certifications</p>
+      
+          <h2 class="h2 section-title" id="certificate-title"></h2>
+      
+          <ul class="certificate-list" id="certificate-list">
+      
+            <li class="certificate-page" data-page="1">
+              <div class="certificate-card">
                 <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
-                  <img src="./assets/images/blog-1.jpg" width="700" height="470" loading="lazy"
-                    alt="Get Started With Tiktok Ads." class="img-cover">
+                  <img src="./assets/images/certificates/CG_WEBINAR.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 1" class="img-cover">
                 </figure>
-
                 <div class="card-content">
-
-                  <time class="time" datetime="2022-06-24">
-                    <span class="span text-lg">24</span>
-                    June 2022
+                  <time class="time" datetime="2023-11-11">
+                    <span class="span text-lg">11</span>
+                    November 2023
                   </time>
-
                   <div>
-                    <h3 class="h3 card-title">Get Started With Tiktok Ads.</h3>
-
-                    <p class="card-text">
-                      Phasellus et lacus suscipit congue nis in the miss mine one miss the drana risus in tincidunt
-                      ornare.
-                    </p>
-
-                    <a href="#" class="btn has-before">
-                      <span class="span">Read more</span>
-
-                      <ion-icon name="arrow-forward"></ion-icon>
+                    <h3 class="h3 card-title">REMOTE: A new normal workplace</h3>
+                    <p class="card-text">A webinar designed for aspiring professionals, providing insights into remote work environments, industry expectations, and best practices for success.</p>
+                    <a href="./assets/images/certificates/pdf/CG_WEBINAR.pdf" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
                     </a>
                   </div>
-
                 </div>
-
+              </div>
+            </li>
+      
+            <li class="certificate-page" data-page="1">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/GIT_WEBINAR.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-10-15">
+                    <span class="span text-lg">15</span>
+                    October 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">GIT it Done: Version Control</h3>
+                    <p class="card-text">A comprehensive webinar covering Git fundamentals, version control best practices, and collaborative development workflows.</p>
+                    <a href="./assets/images/certificates/pdf/GIT_WEBINAR.pdf" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <li class="certificate-page" data-page="2">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/Webflow_1.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-10-07">
+                    <span class="span text-lg">7</span>
+                    October 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">Webflow 1</h3>
+                    <p class="card-text">An introductory course covering the fundamentals of Webflow, including website structure, design principles, and no-code development techniques.</p>
+                    <a href="./assets/images/certificates/pdf/Webflow_1.pdf" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
               </div>
             </li>
 
-            <li>
-              <div class="blog-card">
-
+            <li class="certificate-page" data-page="2">
+              <div class="certificate-card">
                 <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
-                  <img src="./assets/images/blog-2.jpg" width="700" height="470" loading="lazy"
-                    alt="UX in Ecommerce – 5 things to avoid." class="img-cover">
+                  <img src="./assets/images/certificates/Webflow_101.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
                 </figure>
-
                 <div class="card-content">
-
-                  <time class="time" datetime="2022-06-27">
-                    <span class="span text-lg">27</span>
-                    June 2022
+                  <time class="time" datetime="2025-02-01">
+                    <span class="span text-lg">7</span>
+                    October 2024
                   </time>
-
                   <div>
-                    <h3 class="h3 card-title">UX in Ecommerce – 5 things to avoid.</h3>
-
-                    <p class="card-text">
-                      Phasellus et lacus suscipit congue nis in the miss mine one miss the drana risus in tincidunt
-                      ornare.
-                    </p>
-
-                    <a href="#" class="btn has-before">
-                      <span class="span">Read more</span>
-
-                      <ion-icon name="arrow-forward"></ion-icon>
+                    <h3 class="h3 card-title">Webflow 101</h3>
+                    <p class="card-text">A comprehensive course exploring advanced Webflow features, responsive design, CMS integration, and best practices for building dynamic websites.</p>
+                    <a href="./assets/images/certificates/pdf/Webflow_101.pdf" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
                     </a>
                   </div>
-
                 </div>
-
               </div>
             </li>
 
+            <li class="certificate-page" data-page="3">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/SEO.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2025-01-18">
+                    <span class="span text-lg">18</span>
+                    January 2025
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">Search Engine Optimization 1</h3>
+                    <p class="card-text">In-depth course covering the fundamentals of SEO, including keyword research, on-page optimization, and search engine ranking strategies.</p>
+                    <a href="https://app.hubspot.com/academy/achievements/41mm84yj/en/1/jimwell-calma/seo" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="certificate-page" data-page="3">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/SEO2.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-10-07">
+                    <span class="span text-lg">7</span>
+                    October 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">Search Engine Optimization 2</h3>
+                    <p class="card-text">Advanced course exploring technical SEO, backlink strategies, content marketing, and analytics for driving organic growth.</p>
+                    <a href="https://app.hubspot.com/academy/achievements/l95nz4jj/en/1/jimwell-calma/seo-ii" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="certificate-page" data-page="4">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/Cisco_Network.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-06-23">
+                    <span class="span text-lg">23</span>
+                    June 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">Introduction to Networks</h3>
+                    <p class="card-text">Foundational course covering network architecture, protocols, and the principles of connectivity in modern networking.</p>
+                    <a href="https://www.credly.com/badges/ccefc493-77df-4e86-ade4-f2dbceedfeed" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <li class="certificate-page" data-page="4">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/Cisco_CyberSec.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-12-01">
+                    <span class="span text-lg">1</span>
+                    December 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">CyberSecurity Essentials</h3>
+                    <p class="card-text">Comprehensive course exploring core cybersecurity concepts, threat mitigation, network security, and best practices for protecting digital assets.</p>
+                    <a href="#" class="btn has-before">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="certificate-page" data-page="5">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/FreeCodeCamp1.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-01-26">
+                    <span class="span text-lg">26</span>
+                    January 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">Responsive Web Design</h3>
+                    <p class="card-text">A comprehensive course covering modern CSS techniques, flexible layouts, and best practices for creating fully responsive websites.</p>
+                    <a href="https://www.freecodecamp.org/certification/JimwellCalma/responsive-web-design" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="certificate-page" data-page="5">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/FreeCodeCamp2.png" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-03-05">
+                    <span class="span text-lg">5</span>
+                    March 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">JavaScript Algorithms and Data Structures</h3>
+                    <p class="card-text">In-depth course exploring fundamental JavaScript concepts, problem-solving techniques, and algorithmic efficiency.</p>
+                    <a href="https://www.freecodecamp.org/certification/JimwellCalma/javascript-algorithms-and-data-structures" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="certificate-page" data-page="6">
+              <div class="certificate-card">
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/certificates/Python.jpg" width="700" height="470" loading="lazy"
+                    alt="Certificate 2" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <time class="time" datetime="2024-05-01">
+                    <span class="span text-lg">1</span>
+                    May 2024
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">Python Programming Course</h3>
+                    <p class="card-text">A comprehensive course covering fundamental concepts, data structures, object-oriented programming, and practical applications in Python.</p>
+                    <a href="https://www.udemy.com/certificate/UC-6fa0fec9-b7ed-4c99-b605-f95f61d34755/" class="btn has-before" target="_blank">
+                      <span class="span" style="color: #FF7A01;">View Certificate</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true" style="color: #FF7A01;"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            
+            <!-- Add more certificate items here with data-page attribute set to 2, 3, etc. -->
+      
           </ul>
-
+      
+          <div class="pagination-controls">
+            <ul class="pagination">
+              <li>
+                <a href="#" data-page="1" data-title="WEBINAR">1</a>
+              </li>
+              <li>
+                <a href="#" data-page="2" data-title="WEBFLOW">2</a>
+              </li>
+              <li>
+                <a href="#" data-page="3" data-title="SEO">3</a>
+              </li>
+              <li>
+                <a href="#" data-page="4" data-title="CISCO">4</a>
+              </li>
+              <li>
+                <a href="#" data-page="5" data-title="HTML/JS/CSS">5</a>
+              </li>
+              <li>
+                <a href="#" data-page="6" data-title="UDEMY">6</a>
+              </li>
+              <!-- Add more page numbers as needed -->
+            </ul>
+          </div>
+      
         </div>
       </section>
 
@@ -656,73 +826,100 @@
 
 
 
-
   <!-- 
     - #FOOTER
   -->
 
   <footer class="footer">
-    <div class="container">
 
-      <ul class="footer-list">
-
-        <li>
-          <p class="h4 footer-list-title">Get in touch</p>
-        </li>
-
-        <li>
-          <a href="mailto:info@kwilliams.com" class="footer-link">info@kwilliams.com</a>
-        </li>
-
-      </ul>
-
-      <ul class="footer-list">
-
-        <li>
-          <p class="h4 footer-list-title">Locations</p>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">San Francisco — California</a>
-        </li>
-
-      </ul>
-
-      <ul class="social-list">
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-dribbble"></ion-icon>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-skype"></ion-icon>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" class="social-link">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-        </li>
-
-      </ul>
-
+    <div class="footer-top section" id="contact">
+      <div class="container">
+  
+        <p class="section-subtitle" data-reveal>Contact Us</p>
+        <div class="form-container">
+          <div class="form-image">
+            <model-viewer class="model" alt="laptop" src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/b5f434ae4d45d10fe1664d5606ad28e4d9c739af/images/laptop.glb" shadow-intensity="1" camera-controls touch-action="pan-y" environment-image="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/b5f434ae4d45d10fe1664d5606ad28e4d9c739af/images/dancing_hall_2k.hdr" exposure="1.5" disable-zoom disable-tap camera-orbit="-45deg 60deg 9m" autoplay></model-viewer>
+          </div>
+          <div class="form">
+            <input type="text" id="name" placeholder="Enter your full name">
+            <input type="email" id="mail" placeholder="Enter your email address">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
+            <div class="button-container">
+              <div class="send-button">Send</div>
+              <div class="reset-button-container">
+                <div class="reset-button" id="reset-btn">Reset</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  
+    <div class="footer-bottom">
+      <div class="container">
+        
+        <a href="#" class="logo">
+          <img src="./assets/images/LogoCalma.png" width="40" height="40" loading="lazy" alt="Richard home">
+        </a>
+  
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+        
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-xing"></ion-icon>
+            </a>
+          </li>
+        
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        
+        </ul>
+  
+        <p class="copyright">Made with love</p>
+  
+      </div>
+    </div>
+  
+    <div class="footer-bg has-before">
+      <img src="./assets/images/footer-bg.jpg" width="1920" height="1135" loading="lazy" alt="photography"
+        class="img-cover">
+    </div>
+  
   </footer>
 
 
+ <!-- 
+    - #BACK TO TOP
+  -->
 
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>0%</a>
 
+  <!-- 
+    - #CUSTOM CURSOR
+  -->
 
+  <div class="cursor" data-cursor></div>
   <!-- 
     - custom js link
   -->
