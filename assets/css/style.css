@@ -315,6 +315,10 @@ body.nav-active { overflow: auto; }
   margin-block-start: 40px;
 }
 
+.img-holder-2 {
+  aspect-ratio: var(--width) / var(--height);
+  overflow: hidden;
+}
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--white_a5);
@@ -571,10 +575,10 @@ body.nav-active { overflow: auto; }
 
 
 /*-----------------------------------*\
-  #SERVICE
+  #HOBBY
 \*-----------------------------------*/
 
-.service-card {
+.hobby-card {
   position: relative;
   background-color: var(--white);
   height: 100%;
@@ -582,31 +586,31 @@ body.nav-active { overflow: auto; }
   transition: var(--transition-2);
 }
 
-.service-card .card-icon ion-icon {
+.hobby-card .card-icon ion-icon {
   color: var(--content-color, var(--raisin-black));
   font-size: 6rem;
   --ionicon-stroke-width: 15px;
 }
 
-.service-card .card-title {
+.hobby-card .card-title {
   color: var(--content-color, var(--raisin-black));
   margin-block: 20px;
 }
 
-.service-card .card-text { color: var(--content-color); }
+.hobby-card .card-text { color: var(--content-color); }
 
-.service-card .card-number {
+.hobby-card .card-number {
   margin-inline-start: auto;
   font-weight: var(--fw-800);
   line-height: 0.6;
   max-width: max-content;
   margin-block-start: 32px;
-  -webkit-text-stroke: 1px var(--content-color, var(--black));
+  -webkit-text-stroke: 1px var(--orange, var(--black));
   -webkit-text-fill-color: transparent;
-  opacity: 0.3;
+  opacity: 0.9;
 }
 
-.service-card:is(:hover, :focus-within) {
+.hobby-card:is(:hover, :focus-within) {
   background-color: var(--raisin-black);
   --content-color: var(--white);
 }
@@ -638,10 +642,26 @@ body.nav-active { overflow: auto; }
   border-radius: var(--radius-pill);
 }
 
+/* Progress bar animation */
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
 .progress {
   height: inherit;
   background-color: var(--orange);
   border-radius: inherit;
+  animation: progressAnimation 2s ease-in-out forwards;
+}
+
+/* Ensure the progress bar width is set using a custom property */
+.progress-wrapper[data-progress] .progress {
+  --progress-width: attr(data-progress value%);
 }
 
 
@@ -795,7 +815,12 @@ body.nav-active { overflow: auto; }
 
 .carousel-image {
   width: 100%;
-  height: 100%; /* Make the image take the full height */
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-image-photo {
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
