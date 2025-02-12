@@ -260,3 +260,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
   updateCarousel();
 });
+
+
+//CONTACT FORM
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sendButton = document.querySelector(".send-button");
+  const resetButton = document.getElementById("reset-btn");
+
+  sendButton.addEventListener("click", function () {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("mail").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name === "" || email === "" || message === "") {
+          alert("Please fill out all fields before submitting.");
+          return;
+      }
+
+      // Show pop-up message
+      document.getElementById("popup").style.display = "block";
+  });
+
+  // Close pop-up
+  document.getElementById("popup-close").addEventListener("click", function () {
+      document.getElementById("popup").style.display = "none";
+
+      // Clear the form fields after closing
+      document.getElementById("name").value = "";
+      document.getElementById("mail").value = "";
+      document.getElementById("message").value = "";
+  });
+
+  // Reset button clears form
+  resetButton.addEventListener("click", function () {
+      document.getElementById("name").value = "";
+      document.getElementById("mail").value = "";
+      document.getElementById("message").value = "";
+  });
+});
