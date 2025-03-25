@@ -228,7 +228,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 100);
     });
   });
+
+  AOS.init();
 });
+
+
 
 
 
@@ -299,3 +303,20 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("message").value = "";
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Load saved preference
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-mode");
+  }
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    const isLight = body.classList.contains("light-mode");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+  });
+});
+

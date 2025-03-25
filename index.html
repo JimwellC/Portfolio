@@ -30,6 +30,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- 
     - preload images
@@ -65,11 +66,16 @@
         <img src="./assets/images/LogoCalma.png" width="60" height="50" alt="Personal Logo Icon">
       </a>
 
+      <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+        <ion-icon name="sunny-outline" class="icon-sun"></ion-icon>
+        <ion-icon name="moon-outline" class="icon-moon"></ion-icon>
+      </button>
+
       <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
         <span class="line line-1"></span>
         <span class="line line-2"></span>
       </button>
-
+      
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
 
@@ -94,12 +100,22 @@
           </li>
 
           <li>
+            <a href="#timeline" class="navbar-link">Journey</a>
+          </li>
+          
+          <li>
+            <a href="#testimonial" class="navbar-link">Testimonial</a>
+          </li>
+
+          <li>
             <a href="#contact" class="navbar-link">Contact</a>
           </li>
 
-        </ul>
-      </nav>
 
+        </ul>
+
+      </nav>
+      
       <div class="overlay" data-nav-toggler data-overlay></div>
 
     </div>
@@ -857,11 +873,99 @@
         </div>
       </section>
 
+      <section id="timeline" class="section timeline">
+        <div class="container">
+          <h2 class="h2 section-title">My Journey</h2>
+          <div class="timeline-container">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="timeline-content">
+                <span class="timeline-year">2020-2023</span>
+                <h3 class="timeline-title">ENTREPRENEUR</h3>
+                <p class="timeline-subtitle">Self-Employed</p>
+                <p class="timeline-description">Handled customer inquiries and ensured smooth online transactions</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="timeline-content">
+                <span class="timeline-year">2018-Present</span>
+                <h3 class="timeline-title">CASHIER</h3>
+                <p class="timeline-subtitle">San Nicolas Public Market</p>
+                <p class="timeline-description">Managed daily cash transactions and Ensured accurate bookkeeping.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
     </article>
+
+    <section id="testimonial" class="section testimonial">
+      <div class="container">
+        <p class="section-subtitle" data-aos="fade-up">Words from Others</p>
+        <h2 class="h2 section-title" data-aos="fade-up" data-aos-delay="100">Testimonials</h2>
+    
+        <div class="testimonial-slider slider" data-slider data-aos="fade-up" data-aos-delay="200">
+          <ul class="slider-container" data-slider-container>
+    
+            <!-- Testimonial 1 -->
+            <li class="slider-item" data-slider-item>
+              <div class="testimonial-card">
+                <img src="./assets/images/testimonials/avatar1.jpg" alt="Maria Santos" class="testimonial-avatar">
+                <p class="testimonial-text">"Jimwell’s creativity and attention to detail brought our web project to life. Working with him was smooth and inspiring."</p>
+                <div class="testimonial-author">
+                  <strong>— Maria Santos</strong><br>
+                  <span>Project Manager, Horizon Auto Spa</span>
+                </div>
+              </div>
+            </li>
+    
+            <!-- Testimonial 2 -->
+            <li class="slider-item" data-slider-item>
+              <div class="testimonial-card">
+                <img src="./assets/images/testimonials/avatar1.jpg" alt="Maria Santos" class="testimonial-avatar">
+                <p class="testimonial-text">"He was a reliable team player during our internship. Jimwell always delivered quality code and thoughtful designs."</p>
+                <div class="testimonial-author">
+                  <strong>— John Velasquez</strong><br>
+                  <span>Software Engineer, XYZ Corp</span>
+                </div>
+              </div>
+            </li>
+    
+            <!-- Testimonial 3 -->
+            <li class="slider-item" data-slider-item>
+              <div class="testimonial-card">
+                <img src="./assets/images/testimonials/avatar1.jpg" alt="Maria Santos" class="testimonial-avatar">
+                <p class="testimonial-text">"One of the most dedicated and passionate developers I’ve mentored. Jimwell takes initiative and always seeks to improve."</p>
+                <div class="testimonial-author">
+                  <strong>— Prof. Liza Navarro</strong><br>
+                  <span>Mentor, Holy Angel University</span>
+                </div>
+              </div>
+            </li>
+    
+          </ul>
+    
+          <!-- Reuse slider buttons -->
+          <div class="slider-controls">
+            <button class="slider-control prev" data-slider-prev aria-label="Previous">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+            <button class="slider-control next" data-slider-next aria-label="Next">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </main>
 
 
-
+  
 
   <!-- 
     - #FOOTER
@@ -966,6 +1070,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
 
