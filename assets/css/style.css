@@ -927,6 +927,8 @@ body.nav-active { overflow: auto; }
   background-color: var(--raisin-black);
   color: var(--white);
   padding: 30px 24px;
+  height: 100%;
+  width: 100%;
   border-left: 4px solid var(--orange);
   border-radius: 10px;
   min-height: 200px;
@@ -961,6 +963,8 @@ body.nav-active { overflow: auto; }
   margin-bottom: 15px;
   border: 2px solid var(--orange);
 }
+
+
 
 
 /*-----------------------------------*\
